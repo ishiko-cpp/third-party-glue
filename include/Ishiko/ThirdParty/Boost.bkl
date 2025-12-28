@@ -14,7 +14,7 @@ template Boost
 
     if ($(toolset) != gnu)
     {
-        includedirs += $(ISHIKO_CPP_BOOST_ROOT);
-        libdirs += $(ISHIKO_CPP_BOOST_ROOT)/stage/lib;
+        includedirs += $(ISHIKO_CPP_BOOST_ROOT)/include/boost-1_90;
+        libdirs += $(ISHIKO_CPP_BOOST_ROOT)/lib;
     }
 }
