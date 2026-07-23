@@ -1,0 +1,18 @@
+setting ISHIKO_CPP_YAML_CPP_ROOT
+{
+    help = "Path to the yaml-cpp installation";
+    default = '$(YAML_CPP_ROOT)';
+}
+
+template yaml-cpp
+{
+    defines += YAML_CPP_STATIC_DEFINE;
+
+    includedirs += $(ISHIKO_CPP_YAML_CPP_ROOT)/include;
+    libdirs += $(ISHIKO_CPP_YAML_CPP_ROOT)/lib;
+
+    if ($(toolset) != gnu)
+    {
+        libs += yaml-cpp-d-x64;
+    }
+}
